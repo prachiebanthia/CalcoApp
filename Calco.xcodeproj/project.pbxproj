@@ -14,6 +14,8 @@
 		4D0C4F381D7E0AC00025DD82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C4F361D7E0AC00025DD82 /* LaunchScreen.storyboard */; };
 		4D0C4F431D7E0AC00025DD82 /* CalcoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C4F421D7E0AC00025DD82 /* CalcoTests.swift */; };
 		4D0C4F4E1D7E0AC00025DD82 /* CalcoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C4F4D1D7E0AC00025DD82 /* CalcoUITests.swift */; };
+		4D0C4F5B1D7E1DA70025DD82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C4F2F1D7E0AC00025DD82 /* ViewController.swift */; };
+		4D0C4F5D1D7E27C00025DD82 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0C4F5C1D7E27C00025DD82 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		4D0C4F491D7E0AC00025DD82 /* CalcoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D0C4F4D1D7E0AC00025DD82 /* CalcoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcoUITests.swift; sourceTree = "<group>"; };
 		4D0C4F4F1D7E0AC00025DD82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D0C4F5C1D7E27C00025DD82 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,7 @@
 				4D0C4F2D1D7E0AC00025DD82 /* AppDelegate.swift */,
 				4D0C4F2F1D7E0AC00025DD82 /* ViewController.swift */,
 				4D0C4F311D7E0AC00025DD82 /* Main.storyboard */,
+				4D0C4F5C1D7E27C00025DD82 /* SettingsViewController.swift */,
 				4D0C4F341D7E0AC00025DD82 /* Assets.xcassets */,
 				4D0C4F361D7E0AC00025DD82 /* LaunchScreen.storyboard */,
 				4D0C4F391D7E0AC00025DD82 /* Info.plist */,
@@ -258,6 +262,7 @@
 			files = (
 				4D0C4F301D7E0AC00025DD82 /* ViewController.swift in Sources */,
 				4D0C4F2E1D7E0AC00025DD82 /* AppDelegate.swift in Sources */,
+				4D0C4F5D1D7E27C00025DD82 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0C4F5B1D7E1DA70025DD82 /* ViewController.swift in Sources */,
 				4D0C4F431D7E0AC00025DD82 /* CalcoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +488,7 @@
 				4D0C4F541D7E0AC00025DD82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D0C4F551D7E0AC00025DD82 /* Build configuration list for PBXNativeTarget "CalcoTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +497,7 @@
 				4D0C4F571D7E0AC00025DD82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D0C4F581D7E0AC00025DD82 /* Build configuration list for PBXNativeTarget "CalcoUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +506,7 @@
 				4D0C4F5A1D7E0AC00025DD82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
