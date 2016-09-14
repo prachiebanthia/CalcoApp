@@ -61,10 +61,20 @@ class ViewController: UIViewController {
         let locale = NSLocale.currentLocale()
         let currencySymbol = locale.objectForKey(NSLocaleCurrencySymbol)!
         
-        //format and display tip and total, without thousands separator
-        tipLabel.text = String(format: String(currencySymbol) + "%.2f", tip)
-        totalLabel.text = String(format: String(currencySymbol) + "%.2f", total)
+        //format and display tip and total, including thousands separator
+        let numberFormatter = NSNumberFormatter()
+        numberFormatter.numberStyle = .DecimalStyle
+        numberFormatter.minimumFractionDigits = 2
+        numberFormatter.maximumFractionDigits = 2
         
+        //tip
+        let tipStr = numberFormatter.stringFromNumber(tip)
+        tipLabel.text = String(currencySymbol) + tipStr!
+        
+        
+        //total
+        let totalStr = numberFormatter.stringFromNumber(total)
+        totalLabel.text = String(currencySymbol) + totalStr!
     }
     
     
