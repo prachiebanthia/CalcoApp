@@ -13,6 +13,7 @@ Completed:
 * [X] Optional: Offered option to split bill among multiple people
 * [x] Optional: Using locale-specific currency.
 * [x] Optional: Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [x] Optional: Added thousands separator to the total and tip (not in gif, but you can run the code and see)
 
 This app was really fun; looking forward to learning more!
 
