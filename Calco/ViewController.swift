@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.billField.becomeFirstResponder()
-        
         let defaults = NSUserDefaults.standardUserDefaults()
         let tipDefault = defaults.integerForKey("defaultTipKey")
         self.tipControl.selectedSegmentIndex = tipDefault //loads the default tip amount based on your settings
