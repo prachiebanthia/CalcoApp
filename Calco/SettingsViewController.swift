@@ -37,7 +37,6 @@ class SettingsViewController: UIViewController {
     @IBAction func changeUI(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setBool(lightSetting.on, forKey: "lightChoice")
-        print(lightSetting.on)
         defaults.synchronize()
     }
 
@@ -45,22 +44,6 @@ class SettingsViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(defaultTip.selectedSegmentIndex, forKey: "defaultTipKey")
         defaults.synchronize()
-        
-   //     print(defaults.doubleForKey("defaultTipKey"))
-        
-
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
