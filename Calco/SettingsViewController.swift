@@ -15,11 +15,11 @@ class SettingsViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // show the settings as last saved
         let defaults = NSUserDefaults.standardUserDefaults()
         let tipDefault = defaults.integerForKey("defaultTipKey")
-        
         self.defaultTip.selectedSegmentIndex = tipDefault
-        
         let lightSet = defaults.boolForKey("lightChoice")
         self.lightSetting.setOn(lightSet, animated: true)
     }
@@ -34,12 +34,14 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // changes the background color next time the app's main page is shown
     @IBAction func changeUI(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setBool(lightSetting.on, forKey: "lightChoice")
         defaults.synchronize()
     }
 
+    // changes the default tip amount to be shown next time the app is started
     @IBAction func changeDefault(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(defaultTip.selectedSegmentIndex, forKey: "defaultTipKey")

@@ -19,10 +19,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.billField.becomeFirstResponder()
+
         let defaults = NSUserDefaults.standardUserDefaults()
         let tipDefault = defaults.integerForKey("defaultTipKey")
         self.tipControl.selectedSegmentIndex = tipDefault //loads the default tip amount based on your settings
-        defaults.setBool(true, forKey: "lightChoice")
+        
+        let defaultLight = defaults.boolForKey("lightChoice")
+        if defaultLight{
+            greenView.backgroundColor = UIColor.whiteColor()
+        } else { greenView.backgroundColor = UIColor(red:0.69, green:0.89, blue:0.46, alpha:1.0)
+        } // loads the default background color based on your settings
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +61,7 @@ class ViewController: UIViewController {
         let locale = NSLocale.currentLocale()
         let currencySymbol = locale.objectForKey(NSLocaleCurrencySymbol)!
         
-        //show total and tip
+        //format and display tip and total, without thousands separator
         tipLabel.text = String(format: String(currencySymbol) + "%.2f", tip)
         totalLabel.text = String(format: String(currencySymbol) + "%.2f", total)
         
