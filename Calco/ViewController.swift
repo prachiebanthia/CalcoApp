@@ -29,6 +29,15 @@ class ViewController: UIViewController {
             greenView.backgroundColor = UIColor.whiteColor()
         } else { greenView.backgroundColor = UIColor(red:0.69, green:0.89, blue:0.46, alpha:1.0)
         } // loads the default background color based on your settings
+        
+        //load old numbers if the app was killed in the last 30 seconds
+        let oldTime = defaults.objectForKey("lastTime") ?? NSDate()
+        let futureTime = oldTime.dateByAddingTimeInterval(30)
+        if futureTime.timeIntervalSinceNow > 0 {
+            billField.text = defaults.stringForKey("bill")
+            tipLabel.text = defaults.stringForKey("tip")
+            totalLabel.text = defaults.stringForKey("total")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,6 +84,15 @@ class ViewController: UIViewController {
         //total
         let totalStr = numberFormatter.stringFromNumber(total)
         totalLabel.text = String(currencySymbol) + totalStr!
+        
+        //store this info in user defaults and save the time
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(NSDate(), forKey:"lastTime")
+        defaults.setObject(billField.text, forKey: "bill")
+        defaults.setObject(tipLabel.text, forKey: "tip")
+        defaults.setObject(totalLabel.text, forKey: "total")
+        
+        defaults.synchronize()
     }
     
     

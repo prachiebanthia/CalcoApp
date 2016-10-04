@@ -133,6 +133,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Don't Be Cheap" id="PB9-0m-98B">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="deh-JH-OrG">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="6WL-ap-c5S" kind="push" identifier="" id="6A8-gj-QHh"/>
                             </connections>
@@ -228,6 +229,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kzg-3a-xVE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.68844517699999996" green="0.88802765049999999" blue="0.45708315440000002" alpha="0.87813054079999997" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
